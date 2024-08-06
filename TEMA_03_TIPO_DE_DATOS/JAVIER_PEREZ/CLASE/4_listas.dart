@@ -35,7 +35,7 @@ void main () {
   // Se pueden obtener longitud
   // Se puede realizar otras operaciones
   
-  // Codeigo para agregar elementos a la lista
+  // Codigo para agregar elementos a la lista
   lista.add(6); // Se ejecuta una operación sobre la lista
   print(lista);
 
@@ -43,9 +43,9 @@ void main () {
   final longitud = lista.length; // Esto retorna un valor
   print(longitud);
   
-  // Obtener un valor determinado de un alista -> con indices
+  // Obtener un valor determinado de una lista -> con indices
   // indices -> index
-  // Son la posición que tiene cada comentario en la lista
+  // Son la posición que tiene cada elemento en la lista
   // (1, 2, 3, 4, 5) -> Elementos dentro de la lista
   // Las posiciones son:
   // 0, 1, 2, 3, 4
@@ -54,11 +54,15 @@ void main () {
   print(posicionCero);
 
   print(lista[2]);
+  print(lista[3]);
+
 
   // Ultima posición de un elemneto de una lista
   print(lista[lista.length - 1]);
   print (lista.last);
   print (lista.first);
+
+  // Remover elemento de una lista
 
   lista.remove(6); // remove -> elimina un elemento dado un valor
   print(lista);
@@ -69,7 +73,7 @@ void main () {
   lista.removeLast(); // remueve la ultima posición.
   print(lista);
 
-  // Selector -> a una variable _> renderiza
-  // La referncia no cambia por lo tanto el widget 
+  // Widget Selector -> sirve para apuntar a una variable -> cuando esta variable cambia el selector detona y se renderiza la vista
+  // La referncia no cambia por lo tanto el widget asume que no ha cambiado y por lo tanto no necesita
 
 }

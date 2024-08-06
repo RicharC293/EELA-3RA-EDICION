@@ -17,8 +17,8 @@ void main () {
   /// Siempre va a depender del caso de uso
   /// 
   /// CAso de uso
-  /// Desde un EP nos va responder los datos de un usuario en formato jason (igual que uhn  mapa)
-  /// ''' jason
+  /// Desde un EP nos va responder los datos de un usuario en formato json (igual que uhn  mapa)
+  /// ''' json
   /// {
   /// "id": "i",
   /// "user_name": "Javier",
@@ -54,7 +54,7 @@ void main () {
   final apellido1 = usuario['apellido'];
   print(apellido1);
 
-  final apellido2 = usuario['apellidoooooooo'];
+  final apellido2 = usuario['apellidoooooooo']; //-> null
   print(apellido2);
 
   /// MODIFICACION DE VALORE EN MAPAS -> Se puede modificar los valores

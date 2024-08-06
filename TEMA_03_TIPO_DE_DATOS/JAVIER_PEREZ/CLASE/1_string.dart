@@ -52,5 +52,6 @@ void main() {
   //Dart -> todo es un objeto
 
   // concatenadoDart.
+  // Cuenta caracteres
   print(concatenadoDart.length);
 }

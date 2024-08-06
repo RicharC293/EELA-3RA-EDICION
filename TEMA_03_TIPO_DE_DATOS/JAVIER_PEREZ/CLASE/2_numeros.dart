@@ -15,7 +15,7 @@ void main(){
   print(numeroDecimal); 
   
   //Limitar ddecimales
-  double valorPi = pi;
+  const double valorPi = pi;
   print(valorPi);
 
   // Forma 1 -> convertir en String
