@@ -8,4 +8,5 @@ print("Ingresa tu Nombre");
 final nombre = stdin.readByteSync();
 print("Mi nombre es: $nombre");
 
+stdout.write(nombre);
 }
