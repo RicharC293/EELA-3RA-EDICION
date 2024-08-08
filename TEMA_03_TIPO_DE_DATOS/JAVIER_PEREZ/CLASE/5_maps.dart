@@ -67,7 +67,7 @@ void main () {
   usuario[("id")] = "1803893120";
   print(usuario);
 
-  /// Dart tiene la posibilidad de validar si una clave existe la actualiza
+  /// Dart tiene la posibilidad de validar si una llave existe y si no la actualiza
   /// si no existe, la crea
    
   print(usuario["nombre"]);

@@ -14,7 +14,8 @@ void main(){
   late String edad;
 
   // inicializar
-  edad = "10";
+  edad = "0";
+  
 
   print(edad);
 
