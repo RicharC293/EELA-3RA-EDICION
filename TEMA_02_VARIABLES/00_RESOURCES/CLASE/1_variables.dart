@@ -67,6 +67,9 @@ void main() {
   var direccion = "Calle J";
 
 
-
+  String cadenaEntera = '12345';
+  int miEntero = int.parse(cadenaEntera);
+  print('Número entero: $miEntero');
 
 }
+
