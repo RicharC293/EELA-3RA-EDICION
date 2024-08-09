@@ -5,8 +5,8 @@ void main () {
 print("Ingresa tu Nombre");
 
 
-final nombre = stdin.readByteSync();
+final nombre = stdin.readLineSync();
+
 print("Mi nombre es: $nombre");
 
-stdout.write(nombre);
 }

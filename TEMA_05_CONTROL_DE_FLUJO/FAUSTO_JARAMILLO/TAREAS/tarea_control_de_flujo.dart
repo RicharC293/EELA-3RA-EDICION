@@ -14,11 +14,13 @@ print("Ingresa tu nombre:");
 
 final nombre = stdin.readLineSync();
 
-if(nombre != null) {
+
+if(nombre != null && nombre.isNotEmpty) {
 print("Tu nombre es: $nombre");
 
-} else (print("No puede dejar en blanco"));
+} else {
+  (print("El Nombre es: Vacío"));
 
-
+}
 
 }
