@@ -55,4 +55,36 @@ if(condicion) {
   /// 2. Mensaje "Mi nombre es: Richar", cuando el nombre si exista.
 
 
+//Ejercicio
+
+print("Ingresa la puntuacion del trabajador:");
+final puntuacion=stdin.readLineSync();
+
+final puntuaciondouble =double.tryParse(puntuacion ?? '0')?? 0.0;
+
+if (puntuaciondouble>=0.6){
+
+final salariofinal=2400*puntuaciondouble;
+print ("El trabajador va a recibir:\$$salariofinal");
+
+}else if(puntuaciondouble==0.4){
+
+final salariofinal=2400*puntuaciondouble;
+print ("El trabajador va a recibir:\$$salariofinal");
+
+}else if(puntuaciondouble==0.0){
+
+final salariofinal=2400*puntuaciondouble;
+print ("El trabajador va a recibir:\$$salariofinal");
+
+}else{
+print ("la puntuacion ingresada no es correcta:$puntuaciondouble");
+
+}
+
+
+
+
+
+
 }
