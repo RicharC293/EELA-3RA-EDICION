@@ -23,25 +23,30 @@
 import 'dart:io';
 void main () {
 
-print("VALORES PERMITIDOS: 0.0 _ 0.4 _ 0.6");
+print("VALORES PERMITIDOS: 0.0 _ 0.4 _ 0.6 _ Mayor a 0.6");
 print("Ingrese su puntuación:");
 
-double puntaje = double.tryParse(stdin.readLineSync() ?? "0") ?? -1.0;
 
-final bajo  = 0.0;
-final medio = 0.4;
-final alto = 0.6;
+
+double puntaje = double.tryParse(stdin.readLineSync() ?? "0") ?? 0.0;
+
+final bajo      = 0.0;
+final medio     = 0.4;
+final alto      = 0.6;
 
 int base = 2400;
 
 String enunciado = "Su nivel de Remuneración conseguida es:  ";
 
 if (puntaje == bajo) {
-    print (enunciado + "$base * $bajo");
+    final salarioFinal = base * puntaje;
+    print ("enunciado \$$salarioFinal");
  } else if (puntaje == medio) {
-    print(enunciado + "$base * $medio");
- } else if (puntaje == alto) {
-    print(enunciado + "$base * $alto");
+    final salarioFinal = base * puntaje;
+    print("enunciado \$$salarioFinal");
+ } else if (puntaje >= alto) {
+    final salarioFinal = base * puntaje;
+    print("enunciado \$$salarioFinal");
 } else {(print("DEBE INGRESAR SOLO VALORES PERMITIDOS"));
 
 }
