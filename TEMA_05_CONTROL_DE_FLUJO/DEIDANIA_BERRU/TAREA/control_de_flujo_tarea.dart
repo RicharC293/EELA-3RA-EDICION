@@ -36,11 +36,11 @@ disponibles para que elija. Solo se puede eligir un ingrediente además de la mo
 */
 import 'dart:io';
 void main(){ 
-  final IngredientesVeg = [
+  final ingredientesVeg = [
   "Pimiento",
   "Tofu"
   ];
-  final IngredientesNoVeg = [
+  final ingredientesNoVeg = [
   "Peperoni",
   "Jamon",
   "Salmon"
@@ -66,7 +66,7 @@ void main(){
         i=1;
         print(" INGREDIENTES PIZZA VEGETARIANA  ");
         print("================================="); 
-        for(var numero in IngredientesVeg){
+        for(var numero in ingredientesVeg){
           print("$i.- $numero");
           i++;
         }   
@@ -74,7 +74,7 @@ void main(){
         i=1;
        print(" INGREDIENTES PIZZA NO VEGETARIANA  ");
        print("====================================");  
-        for(var numero in IngredientesNoVeg){
+        for(var numero in ingredientesNoVeg){
           print("$i.- $numero");
           i++;
        }
@@ -84,13 +84,13 @@ void main(){
         ingrediente = stdin.readLineSync();
         ingrediente = ingrediente?.toUpperCase();
         if(orden=='SI') { 
-          IngredientesVeg.forEach((element){ 
+          ingredientesVeg.forEach((element){ 
             if (ingrediente == element.toUpperCase()) { 
                existeIngrediente = true ;
             }
           });
         }else if (orden == "NO"){
-          IngredientesNoVeg.forEach((element){ 
+          ingredientesNoVeg.forEach((element){ 
             if (ingrediente == element.toUpperCase()) { 
                existeIngrediente = true ;
             }  
