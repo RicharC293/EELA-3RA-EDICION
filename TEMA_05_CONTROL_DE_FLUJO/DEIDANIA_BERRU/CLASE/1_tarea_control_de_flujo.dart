@@ -50,7 +50,7 @@ Escribir un programa que pregunte al usuario su renta anual y muestre por pantal
     if (valor?.length == 0){
        print("Favor validar, es necesario ingresar un valor");
     }  
-    double rentaAnual = double.parse(valor!);
+    double rentaAnual = double.tryParse(valor ?? '0') ?? 0.0 ;
     double impositivo =0;
     if (rentaAnual   <  10000 ) {
        impositivo = rentaAnual*0.05;
@@ -75,9 +75,10 @@ Escribir un programa que pregunte al usuario su renta anual y muestre por pantal
 
 Escribir un programa que lea la puntuación del usuario e indique su nivel de rendimiento, así como la cantidad de dinero que recibirá el usuario.
 */
+  // Opcion 1
   final Map<String,dynamic>evaluacion = {
  "Juan":{
-  "Puntuacion": 0,
+  "Puntuacion": 0.0,
   "Nivel":"Inaceptable",
   "Dinero":2400},
   "Sofia":{
@@ -99,5 +100,21 @@ Escribir un programa que lea la puntuación del usuario e indique su nivel de re
   }else {
     double remuneracion = evaluacion[empleado]['Puntuacion']*evaluacion[empleado]['Dinero'];
     print("El usuario : $empleado  tiene una evaluacion de ${evaluacion?[empleado]["Nivel"]} su remuneracion a recibir es  $remuneracion ");
-  }       
+  }  
+  // Opcion 2
+  print("Ingresa la puntuacion del trabajador :");
+  final puntuacion = stdin.readLineSync();
+  final puntuacionDouble = double.tryParse(puntuacion ?? '0') ?? 0.0;
+  if (puntuacionDouble >= 0.6) {
+    final salarioFinal = 2400 * puntuacionDouble;
+    print( "El trabajador va ha recibir :\$$salarioFinal");  
+  } 
+  else if (puntuacionDouble == 0.4 ){
+    final salarioFinal = 2400 * puntuacionDouble;
+    print( "El trabajador va ha recibir :\$$salarioFinal");  
+  }     
+  else if (puntuacionDouble == 0.0 ){
+    final salarioFinal = 2400 * puntuacionDouble;
+    print( "El trabajador va ha recibir :\$$salarioFinal");  
+  }     
 }      
