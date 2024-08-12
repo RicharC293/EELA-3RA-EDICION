@@ -1,22 +1,18 @@
 void main() {
   // Comentario sencillo - simple y te puede servir para indicar algo específico
   // dentro del archivo - mensajes a desarrolladores 
-
   // Comentarios de bloque
   // 1
   // 2
   // 3
   // 4
   // 5 
-
   /*
   1.- texto
   2 -> texto
   3 asdas
   5 dasdas
   */
-
-
   /// Comentario de documentación 
   /// 1. Que al presionar enter se coloca automaticamente 
   /// 2. Se muestra afuera del archivo 
@@ -24,14 +20,13 @@ void main() {
   /// 4. Acepta md
   saludo();
 
-  // Shorcuts: 
+  // Shorcuts:
   // windows -> ctrl + / 
   // windows -> ctrl + k + c -> crear comentario
   // windows -> ctrl + k + u -> borrar comentario
-
   // macos -> command + /
-}
 
+}
 /// 
 /// # Este es un comentario de documentación
 /// <h2> Esto es un H2 </h2>
