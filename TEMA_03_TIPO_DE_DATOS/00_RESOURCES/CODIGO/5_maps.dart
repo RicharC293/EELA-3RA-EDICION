@@ -1,6 +1,6 @@
 main() {
+  final Map<String, dynamic> test = new Map();
 
-  final Map<String,dynamic> test = new Map();
   /// Map
   ///
   /// Used to represent a collection of key-value pairs
@@ -79,20 +79,19 @@ main() {
   print(person5.remove('single')); // true
   print(person5); // {name: Juan, age: 30}
 
-
-  /// Quick quiz 
+  /// Quick quiz
   /// Value of map[key] is null, how to avoid this?
-  /// 
+  ///
   /// Valor de map[key] es null, como evitar esto?
-  /// 
+  ///
   /// Use ?? operator
-  /// 
+  ///
   /// Usa el operador ??
   final Map<int, int> mapValues = {
-    1: 1,
-    2: 2,
-    3: 3,
+    1: 10,
+    2: 20,
+    3: 30,
   };
 
-  print(mapValues[10]);
+  print(mapValues[2]);
 }
