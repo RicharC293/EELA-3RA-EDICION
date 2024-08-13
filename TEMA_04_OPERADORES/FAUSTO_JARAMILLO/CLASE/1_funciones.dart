@@ -1,4 +1,3 @@
-import '../../CODIGO/1_funciones.dart';
 
 void main() {
 /// Cierpo de la función
