@@ -56,3 +56,5 @@ void main() {
   informacion.remove('nombre');
   print(informacion);
 }
+
+const VariableGlobal = "0";

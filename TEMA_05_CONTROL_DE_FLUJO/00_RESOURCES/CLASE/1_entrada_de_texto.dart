@@ -1,4 +1,4 @@
- import 'dart:io'; // import -> importación -> tener acceso a los recursos de otro archivo
+import 'dart:io'; // import -> importación -> tener acceso a los recursos de otro archivo
                   // 'dart:io' -> recurso 
                   // '/user/mi_archivo.dart' -> path 
 void main() {
