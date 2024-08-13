@@ -9,8 +9,8 @@ final TOT = "Tomate";
 final TF = "Tofu";
 final PIM = "Pimiento";
 final PPI = "Peperoni";
-final JMN = "Jamón";
-final SMON = "Salmón";
+final JMN = "Jamon";
+final SMON = "Salmon";
 
 print("Hola, cómo te llamas?");
 
@@ -36,8 +36,8 @@ if (cliente != null && cliente.isNotEmpty) {
       print("Tu pizza SI es vegetariana");
       break;
       case "Peperoni":
-      case "Jamón":
-      case "Salmón":
+      case "Jamon":
+      case "Salmon":
       print("Los ingredientes de tu pizza son: $ingrediente $QM $TOT");
       print("Tu pizza NO es vegetariana");
     default:
