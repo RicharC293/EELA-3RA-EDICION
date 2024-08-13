@@ -22,7 +22,7 @@ if (cliente != null && cliente.isNotEmpty) {
 
   String? vegetariana = stdin.readLineSync();
 
-  while (vegetariana == "si") {Fausto
+  while (vegetariana == "si") {
 
     print("Elije tu ingrediente adicional:"); 
     print("$TF, $PIM, $PPI, $JMN, $SMON");
