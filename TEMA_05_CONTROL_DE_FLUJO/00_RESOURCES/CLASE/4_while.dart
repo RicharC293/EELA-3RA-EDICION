@@ -2,14 +2,16 @@ import 'dart:io';
 
 void main() {
   /// while -> Mientras la condición sea verdadera ejecutalo
-  /// 1. bandera -> inicializar la condición y definir cuando termina
+  /// 1. bandera -> inicializar la condición y definir cuando termina (interrumpa)
   /// 2. bloque while
-  int i = 0;
+  
+  int i = 0; /// condicion o bandera 
 
-  while (i < 0) {
-    print("El valor es: $i");
-    //IMPORTANTE
-    i++;
+  /// bloque while
+
+  while (i < 5) {
+    print("El valor es: $i"); /// cuerpo de la funcion de while
+    i++; //IMPORTANTE NUNCA OLVIDARSE DE COLOCAR LA VARIABLE CON LO CUAL SE VA A CERRAR EL BUCLE WHILE
   }
 
   // do - while -> primero hace luego pregunta
@@ -21,10 +23,10 @@ void main() {
   } while (j < 0);
 
   /// Ingresar un nombre y en el caso de que sea null o vacío se vuelva a preguntar
-  // String? nombre;
-  // while (nombre == null || nombre.isEmpty) {
-  //   print("Ingresa tu nombre");
-  //   nombre = stdin.readLineSync();
-  // }
-  // print("Tu nombre es: $nombre");
+  String? nombre;
+  while (nombre == null || nombre.isEmpty) {
+  print("Ingresa tu nombre");
+  nombre = stdin.readLineSync();
+  }
+  print("Tu nombre es: $nombre");
 }
