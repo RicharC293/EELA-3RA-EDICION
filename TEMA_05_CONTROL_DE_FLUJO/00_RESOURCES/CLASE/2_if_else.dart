@@ -55,6 +55,40 @@ if(condicion) {
 
 // 2. En una determinada empresa, sus empleados son evaluados al final de cada año. Los puntos que pueden obtener en la evaluación comienzan en 0.0 y pueden ir aumentando, traduciéndose en mejores beneficios. Los puntos que pueden conseguir los empleados pueden ser 0.0, 0.4, 0.6 o más, pero no valores intermedios entre las cifras mencionadas. A continuación se muestra una tabla con los niveles correspondientes a cada puntuación. La cantidad de dinero conseguida en cada nivel es de 2.400€ multiplicada por la puntuación del nivel.
 
+//<<<<<<< HEAD
+//Ejercicio
+
+print("Ingresa la puntuacion del trabajador:");
+final puntuacion=stdin.readLineSync();
+
+final puntuaciondouble =double.tryParse(puntuacion ?? '0')?? 0.0;
+
+if (puntuaciondouble>=0.6){
+
+final salariofinal=2400*puntuaciondouble;
+print ("El trabajador va a recibir:\$$salariofinal");
+
+}else if(puntuaciondouble==0.4){
+
+final salariofinal=2400*puntuaciondouble;
+print ("El trabajador va a recibir:\$$salariofinal");
+
+}else if(puntuaciondouble==0.0){
+
+final salariofinal=2400*puntuaciondouble;
+print ("El trabajador va a recibir:\$$salariofinal");
+
+}else{
+print ("la puntuacion ingresada no es correcta:$puntuaciondouble");
+
+}
+
+
+
+
+
+
+//=======
 // | Nivel         | Puntuación    |
 // |---------------|---------------|
 // |Inaceptable    |0.0            |
@@ -68,9 +102,9 @@ if(condicion) {
 
 // Pedir que ingrese un valor (puntuación)
   print("Ingresa la puntuación del trabajador:");
-  final puntuacion = stdin.readLineSync();
+  final puntuacion1 = stdin.readLineSync();
 
-  final puntuacionDouble = double.tryParse(puntuacion ?? '0') ?? 0.0;
+  final puntuacionDouble = double.tryParse(puntuacion1 ?? '0') ?? 0.0;
 
   final alto = 0.6;
   final medio = 0.4;
@@ -94,4 +128,5 @@ if(condicion) {
   } else {
     print("La puntuación ingresada no es correcta: $puntuacionDouble");
   }
+//>>>>>>> upstream/master
 }
