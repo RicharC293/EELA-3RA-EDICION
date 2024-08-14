@@ -1,6 +1,6 @@
 
 void main() {
-/// Cierpo de la función
+/// Cuerpo de la función
   print("");
   saludar();
   print("");
