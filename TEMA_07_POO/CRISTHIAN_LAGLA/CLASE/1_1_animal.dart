@@ -1,5 +1,3 @@
-import '../../00_RESOURCES/CODIGO/2_herencias.dart';
-import '1_1_animal.dart';
 void main() {
   //// Crear objetos
   /// 1. Perro
@@ -31,7 +29,6 @@ void main() {
   print(mono.toString());
   print (mono.tipoDeComida);
   print (mono.tipoComidaMayusculas);
-  
 }
 
 // Crear clase
@@ -59,6 +56,8 @@ final String _nombre;
     required this.color,
     required this.tipoDeComida,
   });
+
+  final _tamano='Grande';
 
   /// Métodos o funciones
 
@@ -100,5 +99,17 @@ String get tipoComidaMayusculas{
 String get valorX=>'Esta es una clase';
 
 
+String get nombreAnimal=>this._nombre;
+String get esunanimalgrande{
+if(_tamano=='Grande'){
+return "Es un animal Grande";
+} return "No se reconoce altura";
+}
+
+
+
+set cumple (int edadactual){
+this.edad=edadactual;
+}
 
 }
