@@ -22,16 +22,16 @@ import 'dart:math';
 void main(){
   double resulAreac;
   double resulAreacl;
-  String numbinario;
-  double numdecimal;
+  String numBinario;
+  double numDecimal;
   resulAreac=areaCirculo(radio: 3);
   print("Area Circulo $resulAreac");
   resulAreacl=areaCilindro(radio:3, altura: 10);
   print("Volumen Cilindro $resulAreacl");
-  numbinario=decimalbinario(decimal: 172);
-  print("El numero decimal a binario es: $numbinario");
-  numdecimal=binariodecimal(binario: "10101100");
-  print("El numero binario es : $numdecimal");
+  numBinario=decimalbinario(decimal: 172);
+  print("El numero decimal a binario es: $numBinario");
+  numDecimal=binariodecimal(binario: "10101100");
+  print("El numero binario es : $numDecimal");
 } 
 double areaCirculo({required double radio
                     }){
