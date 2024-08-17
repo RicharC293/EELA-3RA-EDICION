@@ -10,14 +10,17 @@ void main() {
   print('Volumen del cilindro: $volumenCilindro1');
 }
 
-double areaCirculo(a) {
+double areaCirculo(double a) {
   double area = pi * (a * a);
   return area;
 }
 
-double volumenCilindro(area, altura) {
+double volumenCilindro(double area, double altura) {
   double area1 = area;
   double altura1 = altura;
   double volumen = area1 * altura1;
   return volumen;
 }
+
+//FUNCION FLECHA
+double areaCirculoFlecha(double a) => pi * (a * a);
