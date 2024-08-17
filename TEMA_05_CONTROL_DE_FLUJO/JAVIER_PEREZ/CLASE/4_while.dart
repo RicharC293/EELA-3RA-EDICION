@@ -18,7 +18,7 @@ void main(){
     print("Por favor ingresa tu nombre");
       nombre = stdin.readLineSync();
     }
-    print("Ti nombre es $nombre");
+    print("Tu nombre es $nombre");
   
   // do - while
   int j = 0; 

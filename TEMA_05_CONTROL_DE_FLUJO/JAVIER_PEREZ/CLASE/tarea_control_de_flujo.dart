@@ -44,41 +44,74 @@ void main(){
      }
   }
 
- /// 2. En una determinada empresa, sus empleados son evaluados al final de cada año. Los puntos que pueden obtener en la evaluación comienzan en 0.0 y pueden ir aumentando, traduciéndose en mejores beneficios. Los puntos que pueden conseguir los empleados pueden ser 0.0, 0.4, 0.6 o más, pero no valores intermedios entre las cifras mencionadas. A continuación se muestra una tabla con los niveles correspondientes a cada puntuación. La cantidad de dinero conseguida en cada nivel es de 2.400€ multiplicada por la puntuación del nivel.
-
-//| Nivel         | Puntuación    |
-//|---------------|---------------|
-//|Inaceptable    |0.0            |
-//|Aceptable      |0.4            |
-//|Meritorio	    |0.6 o más      |
-
-//Escribir un programa que lea la puntuación del usuario e indique su nivel de rendimiento, así como la cantidad de dinero que recibirá el usuario.
-
-// pepito -> 0.0 -> 2400 -> 2400*0.4 = 0
-
-// Pedir que ingrese una puntuación
-print("Ingresa una puntuación");
-
-final puntuacion = stdin.readLineSync();
-final puntuacionDouble = double.tryParse(puntuacion ?? '0') ?? 0.0;
-
-/// Meritorio
-if(puntuacionDouble >= 0.6) {
-  final salarioFinal = 2400 * puntuacionDouble;
-  print ("El trabajador va a recibir; \$$salarioFinal");
-} 
-/// Aceptable
-else if (puntuacionDouble == 0.4){
-final salarioFinal = 2400 * puntuacionDouble;
-  print ("El trabajador va a recibir; \$$salarioFinal");
-} 
-
-/// Inaceptable
-else if (puntuacionDouble == 0.0){
-final salarioFinal = 2400 * puntuacionDouble;
-  print ("El trabajador va a recibir; \$$salarioFinal");
-} else{
-  print("La puntuación es incorrecta");
-}
+ /// 3.
   
+     while (true){
+     
+     print("Hola, 'Bienvenido al sistema de calculo del impuesto a la renta'. Por favor ingrese su renta anual!");
+
+     final rentaAnual = stdin.readLineSync();
+     final rentaAnual0 = double.tryParse(rentaAnual ?? '');
+     
+     
+     if (rentaAnual0 != null){
+     if (rentaAnual0 < 10000){
+      final impuesto = (rentaAnual0 *5)/100;
+      print("El valor de tu impuesto a la renta es: $impuesto");
+     }     
+     else if (rentaAnual0 >= 10000 && rentaAnual0 < 20000){
+      final impuesto = (rentaAnual0 *15)/100;
+      print("El valor de tu impuesto a la renta es: $impuesto");
+     } 
+     else if (rentaAnual0 >= 20000 && rentaAnual0 < 35000){
+      final impuesto = (rentaAnual0 *20)/100;
+      print("El valor de tu impuesto a la renta es: $impuesto");
+     }
+     else if (rentaAnual0 >= 35000 && rentaAnual0 <= 60000){
+      final impuesto = (rentaAnual0 *30)/100;
+      print("El valor de tu impuesto a la renta es: $impuesto");
+     }
+     else if (rentaAnual0 > 60000){
+      final impuesto = (rentaAnual0 *45)/100;
+      print("El valor de tu impuesto a la renta es: $impuesto");
+     } break;
+     } else{
+      print("El parametro ingresado es incorrecto, vuelve a ingresarlo:");
+     } 
+     }
+
+
+/// 4. 
+    
+    while (true) {
+    print("Ingresa una puntuación");
+
+    final puntuacion = stdin.readLineSync();
+    final puntuacionDouble = double.tryParse(puntuacion ?? '0');
+
+    
+    if (puntuacionDouble != null && (puntuacionDouble == 0.4 || puntuacionDouble >= 0.6 || puntuacionDouble == 0.00)){
+    
+    /// Meritorio
+    if (puntuacionDouble >= 0.6) {
+      final salarioFinal = 2400 * puntuacionDouble;
+      print("El trabajador va a recibir; \$$salarioFinal");
+    }
+
+    /// Aceptable
+    else if (puntuacionDouble == 0.4) {
+      final salarioFinal = 2400 * puntuacionDouble;
+      print("El trabajador va a recibir; \$$salarioFinal");
+    }
+
+    /// Inaceptable
+    else if (puntuacionDouble == 0.0) {
+      final salarioFinal = 2400 * puntuacionDouble;
+      print("El trabajador va a recibir; \$$salarioFinal");
+    } 
+      break;
+    } else {
+      print("La puntuación es incorrecta, vuelva a ingresarla: ");
+    }
+  }
 }

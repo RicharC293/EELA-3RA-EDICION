@@ -1,7 +1,11 @@
+import 'dart:io';
+
 void main() {
   // switchcase
 
-  final diaDeLaSemana = "Semana";
+  print("Ingresa un dia");
+  final diaDeLaSemana = stdin.readLineSync();
+  
   // Lunes, Martes, Miercoles, Jueves -> Clases
   // Viernes -> Trabajo
   // Sabado, Domingo -> Libre
@@ -61,6 +65,8 @@ void main() {
     case 'Martes':
     case 'Miercoles':
     case 'Jueves':
+    print("Dia de clase");
+    break;
     case 'Viernes':
       print("Dia de Trabajo");
       break;
