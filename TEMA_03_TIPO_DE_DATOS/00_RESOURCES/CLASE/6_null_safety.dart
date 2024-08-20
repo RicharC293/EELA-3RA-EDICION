@@ -22,7 +22,9 @@ void main() {
 
   String? apellido;
   print(apellido); // null
-
+  
+  final apelfinal = apellido ?? "Pérez";
+  print(apelfinal);
   apellido = "Cangui";
   print(apellido);
 
@@ -34,9 +36,10 @@ void main() {
 
   List<String?> clasesDeEstaSemana = ['Lunes', null, 'Miercoles', 'Jueves'];
   print(clasesDeEstaSemana.length);
+  print(clasesDeEstaSemana);
 
   List<String>? clasesDeNavidad = null;
-  // print(clasesDeNavidad.length);
+  //print(clasesDeNavidad.length); -> me genera error
 
   /// Controlar el valor null
   /// ?

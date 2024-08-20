@@ -26,7 +26,7 @@ int sumar(int valor1, int valor2) {
 //   return (5,"4");
 // }
 
-// 3. Utilizar una tupla (Dart 3.0.0 o superior):
+// 3. Utilizar una dupla (Dart 3.0.0 o superior):
 
 // (int, int) obtenerValores() {
 //   int valor1 = 42;

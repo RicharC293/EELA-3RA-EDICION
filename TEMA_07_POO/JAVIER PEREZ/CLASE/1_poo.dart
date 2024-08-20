@@ -7,6 +7,7 @@ void main() {
   /// 2. Gato
   /// 3. Elefante
   /// Estructura
+  
   final perro = Animal("Kit", edad: 12, genero: "Macho", color: "Blanco", tipoDeComida: "Croquetas");
   print(perro.edad);
   perro.comer();
