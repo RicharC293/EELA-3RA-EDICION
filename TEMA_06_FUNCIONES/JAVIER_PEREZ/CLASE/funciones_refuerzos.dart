@@ -11,6 +11,11 @@ final factorial = nfactorial(
   mensaje: "El factorial de",
   );
   print("es: $factorial");
+
+final numero = 7; // Número hasta el cual calcular el factorial
+  final factorial1 = nfactorial1(numero);
+  print("El factorial de $numero es: $factorial1");
+
 }
 
 int nfactorial ({
@@ -27,3 +32,20 @@ int nfactorial ({
   return v1 * v2 * v3 * v4 * v5 * v6 * v7;
   //
 }
+
+int nfactorial1(int n) {
+  if (n < 0) {
+    throw ArgumentError("El número debe ser mayor o igual a 0.");
+  }
+  
+  // Crear una lista con los números del 1 hasta n
+  List<int> valores = List.generate(n, (index) => n - index);
+  
+  int resultado = 1;
+  for (int valor in valores) {
+    resultado *= valor;
+  }
+  return resultado;
+}
+
+// decimal a binario 
