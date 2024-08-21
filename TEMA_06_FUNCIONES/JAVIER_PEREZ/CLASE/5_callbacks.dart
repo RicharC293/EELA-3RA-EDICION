@@ -13,13 +13,23 @@ void main() {
   listViewBuilder(builder: () {
     print("Esta es una función anonima");
   });
+  final double radio = 5;
+  print(areaCirculo(radio));
 
   ///ejemplo callback
   /// Vloumen de cilindro
-  volumenCilindro(
-    area: () => areaCirculo(12.2),
-    altura: 10.2,
+  double area1 = areaCirculo(radio);
+  double altura = 7;
+
+  double volumen = volumenCilindro(
+    area: () {
+      return area1;
+    },
+    altura: altura,
   );
+
+  // Imprimir el resultado
+  print('El volumen del cilindro es: $volumen');
 }
 
 /// Callback es una función que se usa como parametro
