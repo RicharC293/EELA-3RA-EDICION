@@ -1,8 +1,18 @@
 //tarea tema 8
 
 import 'dart:convert';
+import 'package:http/http.dart' as http;
 
-void main() {
+void main() async {
+  final uri = Uri.https('swapi.dev', '/api/planets/3/');
+  final respuesta = await http.get(uri);
+  if (respuesta.statusCode != 200) {
+    print("Error al recibir el paquete: ");
+    print(respuesta.statusCode);
+  } else {
+    print("Respuesta correcta:");
+    print(respuesta.statusCode);
+  }
   Map<String, dynamic> texto = {
     "name": "Yavin IV",
     "rotation_period": "24",
@@ -22,50 +32,81 @@ void main() {
     "edited": "2014-12-20T20:58:18.421000Z",
     "url": "https://swapi.dev/api/planets/3/"
   };
-  print(texto);
-  print("texto:");
-  print(texto['films']);
-  Planeta planeta1 = Planeta.desdeJson(texto);
+  Map<String, dynamic> textoWeb = jsonDecode(respuesta.body);
+  print("texto decodificado:");
+  print(textoWeb);
+
+  Planeta planeta1 = Planeta.desdeJson(jsonDecode(respuesta.body));
   print(planeta1.name);
+  print(planeta1.residents);
   print(planeta1.films);
 }
 
 class Planeta {
-  String? name;
-  String? rotationPeriod;
-  String? orbitalPeriod;
-  String? diameter;
-  String? climate;
-  String? gravity;
-  String? terrain;
-  String? surfaceWater;
-  String? population;
-  List<String>? residents;
-  List<String>? films;
-  DateTime? created;
-  DateTime? edited;
-  String? url;
+  final String name;
+  final int? rotationPeriod;
+  final String? orbitalPeriod;
+  final String? diameter;
+  final String? climate;
+  final String? gravity;
+  final String? terrain;
+  final String? surfaceWater;
+  final String? population;
+  final List<dynamic>? residents;
+  final List<dynamic>? films;
+  final DateTime? created;
+  final DateTime? edited;
+  final String? url;
 
-  Planeta.desdeJson(Map<String, dynamic> json) {
-    name = json['name'];
-    rotationPeriod = json['rotation_period'];
-    orbitalPeriod = json['orbital_period'];
-    diameter = json['diameter'];
-    climate = json['climate'];
-    gravity = json['gravity'];
-    terrain = json['terrain'];
-    surfaceWater = json['surface_water'];
-    population = json['population'];
+  Planeta(
+      {required this.name,
+      this.rotationPeriod,
+      this.orbitalPeriod,
+      this.diameter,
+      this.climate,
+      this.gravity,
+      this.terrain,
+      this.surfaceWater,
+      this.population,
+      this.residents,
+      this.films,
+      this.created,
+      this.edited,
+      this.url});
+
+  factory Planeta.desdeJson(Map<String, dynamic> json) {
+    final resident = json['residents'] as List<dynamic>?;
+    final film = json['films'] as List<dynamic>?;
+    final rotation = int.parse(json['rotation_period']);
+
     if (json['residents'] != null) {
-      residents = <String>[];
+      //resident = <String>[];
       json['residents'].forEach((v) {
-        residents!.add(json['residents']);
+        resident!.add(json['residents']);
       });
     }
-    if (json['films'] != null) {
-      films = <String>[];
-      films = json['films'];
-    }
+    /*    if (json['films'] != null) {
+      //films = <String>[];
+      json['films'].forEach((v) {
+        film!.add(json['films']);
+      });*/
+
+    return Planeta(
+      name: json['name'] as String,
+      rotationPeriod: rotation,
+      orbitalPeriod: json['orbital_period'] as String,
+      diameter: json['diameter'] as String,
+      climate: json['climate'] as String,
+      gravity: json['gravity'] as String,
+      terrain: json['terrain'] as String,
+      surfaceWater: json['surface_water'] as String,
+      population: json['population'] as String,
+      residents: resident != null ? resident : null,
+      films: film != null ? film : null,
+      created: DateTime.parse(json['created']),
+      edited: DateTime.parse(json['edited']),
+      url: json['url'] as String,
+    );
   }
 
   /* Planeta.desdeJson(String json) {
