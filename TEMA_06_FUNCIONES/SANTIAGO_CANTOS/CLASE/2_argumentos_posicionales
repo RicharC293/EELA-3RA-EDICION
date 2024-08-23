@@ -1,0 +1,9 @@
+void main(){
+
+}
+
+
+    int sumar(int valor1, int valor2){
+        final suma = valor1 + valor2;
+        return suma;
+    }
