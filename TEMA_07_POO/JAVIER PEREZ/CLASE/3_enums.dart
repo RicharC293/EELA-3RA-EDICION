@@ -47,6 +47,10 @@ void main() {
 // Enum simple
 enum DiaSemana { Lunes, Martes, Miercoles, Jueves, Viernes, Sabado, Domingo }
 
+enum TipoMascota { perro, gato }
+
+enum TipoDeUsuario { Cliente, Administrador }
+
 // Enum descriptivo
 enum DiaSemanaDescriptivo {
   Lunes("Hoy es Lunes"),
