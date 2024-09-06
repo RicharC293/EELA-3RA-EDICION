@@ -4,8 +4,7 @@ void main() {
   // 1.
   final double radio = 5;
   print("El area del circulo es:");
-  final areaCir = areaCirculo(radio);
-  print(areaCir);
+
   print(areaCirculo(radio));
 
   double area1 = areaCirculo(radio);
@@ -28,6 +27,9 @@ void main() {
 
   int decimal = binarioADecimal(numBinario);
   print('El número binario $numBinario en decimal es: $decimal');
+
+  final binar = decABinario(13);
+  print('El binario de $decABinario es $binar');
 }
 
 double areaCirculo(double radio) {
@@ -39,6 +41,16 @@ double volumenCilindro({required Function area, required double altura}) {
 }
 
 // 2.
+
+String decABinario(int numero) {
+  if (numero == 0) return '0';
+
+  String binar = '';
+  for (int n = numero; n > 0; n = numero ~/ 2);
+  binar = (numero % 2).toString() + binar;
+  return binar;
+}
+
 String decimalABinario(int numero) {
   if (numero == 0) return '0';
   String binario = '';

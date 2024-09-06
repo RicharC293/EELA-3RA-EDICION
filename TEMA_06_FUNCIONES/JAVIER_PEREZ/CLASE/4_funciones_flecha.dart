@@ -25,7 +25,3 @@ double volumenCilindro({required double radio, required double altura}) {
 /// ejemplo:
 
 double areaCirculo1(double radio) => pi * (radio * radio);
-
-
-
-
